@@ -6,6 +6,7 @@ function TaskForm({ onAddTask }) {
   // BUG: Missing form validation - allows empty tasks to be added
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('DEBUG: submitting task', text);
     onAddTask(text);
     setText('');
   };

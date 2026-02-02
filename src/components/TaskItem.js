@@ -10,7 +10,7 @@ function TaskItem({ task, onToggle, onDelete }) {
       />
       <span>{task.text}</span>
       <button className="delete-btn" onClick={() => onDelete(task.id)}>
-        Delete
+        Delte
       </button>
     </li>
   );
