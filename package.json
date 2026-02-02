@@ -2,6 +2,7 @@
   "name": "task-manager-demo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://trend-reena-tsai.github.io/demo-app",
   "description": "A simple task manager app (work in progress)",
   "dependencies": {
     "react": "^18.2.0",
