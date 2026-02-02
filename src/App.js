@@ -32,10 +32,9 @@ function App() {
     // TODO: Implement delete functionality
   };
 
-  // BUG: Filter logic is incorrect - 'completed' filter shows incomplete tasks
   const getFilteredTasks = () => {
     if (filter === 'completed') {
-      return tasks.filter((task) => !task.completed);
+      return tasks.filter((task) => task.completed);
     } else if (filter === 'active') {
       return tasks.filter((task) => !task.completed);
     }
