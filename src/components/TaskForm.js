@@ -3,11 +3,13 @@ import React, { useState } from 'react';
 function TaskForm({ onAddTask }) {
   const [text, setText] = useState('');
 
-  // BUG: Missing form validation - allows empty tasks to be added
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('DEBUG: submitting task', text);
-    onAddTask(text);
+    const trimmedText = text.trim();
+    if (!trimmedText) {
+      return; // Don't add empty tasks
+    }
+    onAddTask(trimmedText);
     setText('');
   };
 
