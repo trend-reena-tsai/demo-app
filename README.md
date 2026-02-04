@@ -2,6 +2,18 @@
 
 A simple task manager application built with React. This is a **work-in-progress** project with known issues that need to be fixed.
 
+## About This Project
+
+This demo project was created for **AI Team Day** to showcase the capabilities of [Moltbot](https://github.com/moltbot/moltbot) — an AI-powered coding assistant. The app intentionally contains bugs and incomplete features, allowing participants to experience how Moltbot can:
+
+- 🔍 **Analyze code** and identify issues
+- 🐛 **Debug problems** with context-aware suggestions
+- 🛠️ **Fix bugs** through guided code changes
+- 📝 **Create PRs** following proper Git workflows
+- 🤖 **Monitor deployments** via GitHub Pages
+
+Perfect for hands-on learning and demonstrating AI-assisted development workflows!
+
 ## Getting Started
 
 ```bash
