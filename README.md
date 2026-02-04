@@ -69,3 +69,52 @@ This project has **7 open issues** that need to be addressed:
 
 - React 18
 - CSS
+
+## Architecture
+
+### Project Structure
+
+```
+demo-app/
+├── public/
+│   └── index.html          # HTML entry point
+├── src/
+│   ├── index.js            # React DOM render entry
+│   ├── index.css           # Global styles
+│   ├── App.js              # Main app component & state management
+│   └── components/
+│       ├── TaskForm.js     # New task input form
+│       ├── TaskList.js     # Renders filtered task list
+│       ├── TaskItem.js     # Individual task with toggle/delete
+│       ├── TaskStats.js    # Completed/remaining counters
+│       └── ServiceStatus.js # Health check display (stub)
+└── package.json
+```
+
+### Component Hierarchy
+
+```
+App (state: tasks[], filter)
+├── TaskForm        → addTask()
+├── Filter Buttons  → setFilter()
+├── TaskList
+│   └── TaskItem    → toggleTask(), deleteTask()
+└── TaskStats
+```
+
+### Data Flow
+
+- **State Management:** React `useState` hooks in `App.js` (no Redux/Context)
+- **Props Down:** Parent passes `tasks`, callbacks to children
+- **Events Up:** Children call `onToggle`, `onDelete`, `onAddTask` props
+- **Filtering:** Computed in `getFilteredTasks()` before render
+
+### Task Object Schema
+
+```javascript
+{
+  id: number,        // Unique ID (Date.now() on creation)
+  text: string,      // Task description
+  completed: boolean // Toggle state
+}
+```
