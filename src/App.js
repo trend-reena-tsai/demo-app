@@ -29,7 +29,7 @@ function App() {
   };
 
   const deleteTask = (id) => {
-    // TODO: Implement delete functionality
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   const getFilteredTasks = () => {
