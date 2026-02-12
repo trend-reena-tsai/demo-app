@@ -30,15 +30,7 @@ npm start
 
 ## Known Issues
 
-This project has **7 open issues** that need to be addressed:
-
-### Issue #2: Delete functionality not implemented
-**Location:** `src/App.js` - `deleteTask()` function  
-**Problem:** The delete button doesn't work. The function body is empty with only a TODO comment.
-
-### Issue #3: Empty tasks can be added
-**Location:** `src/components/TaskForm.js` - `handleSubmit()` function  
-**Problem:** Users can add empty tasks. There's no validation to prevent submitting blank task text.
+This project has **5 open issues** that need to be addressed:
 
 ### Issue #4: Task stats show incorrect count
 **Location:** `src/components/TaskStats.js`  
@@ -63,6 +55,8 @@ This project has **7 open issues** that need to be addressed:
 ## Resolved Issues
 
 - ~~Issue #1: Filter shows wrong tasks~~ ✅ Fixed
+- ~~Issue #2: Delete functionality not implemented~~ ✅ Fixed
+- ~~Issue #3: Empty tasks can be added~~ ✅ Fixed
 - ~~Issue #7: Delete button typo "Delte"~~ ✅ Fixed
 
 ## Tech Stack
